@@ -1,0 +1,137 @@
+[
+  {
+    "id": "war-in-heaven",
+    "date": "c. 65 million years before M41",
+    "era": "Ancient",
+    "title": "The War in Heaven",
+    "description": "The Necrontyr and their C'tan masters wage a galaxy-shaping war against the Old Ones and their servant races.",
+    "faction": "Necrons",
+    "accent": "warp"
+  },
+  {
+    "id": "fall-of-aeldari",
+    "date": "c. M30",
+    "era": "Age of Strife",
+    "title": "The Fall of the Aeldari",
+    "description": "Aeldari excess births Slaanesh, tears open the Eye of Terror, and ends an ancient galactic empire.",
+    "faction": "Aeldari",
+    "accent": "blood"
+  },
+  {
+    "id": "unification-wars",
+    "date": "Late M30",
+    "era": "Unification",
+    "title": "The Unification Wars",
+    "description": "The Emperor conquers the techno-barbarian states of Terra and lays the foundation of the Imperium.",
+    "faction": "Imperium",
+    "accent": "gold"
+  },
+  {
+    "id": "great-crusade",
+    "date": "798.M30",
+    "era": "Great Crusade",
+    "title": "The Great Crusade Begins",
+    "description": "The Legiones Astartes and rediscovered Primarchs carry the Imperial Truth across the stars.",
+    "faction": "Imperium",
+    "accent": "gold"
+  },
+  {
+    "id": "ullanor",
+    "date": "000.M31",
+    "era": "Great Crusade",
+    "title": "Triumph at Ullanor",
+    "description": "A vast Ork empire is broken and Horus is elevated to Warmaster before the assembled hosts.",
+    "faction": "Imperium",
+    "accent": "gold"
+  },
+  {
+    "id": "horus-heresy",
+    "date": "005-014.M31",
+    "era": "Horus Heresy",
+    "title": "The Horus Heresy",
+    "description": "Half the Primarchs rebel, turning the Great Crusade into a civil war that scars humanity forever.",
+    "faction": "Chaos",
+    "accent": "blood"
+  },
+  {
+    "id": "siege-of-terra",
+    "date": "014.M31",
+    "era": "Horus Heresy",
+    "title": "The Siege of Terra",
+    "description": "The Warmaster's armies assault the Imperial Palace; Horus falls and the Emperor is interred.",
+    "faction": "Imperium",
+    "accent": "blood"
+  },
+  {
+    "id": "scouring",
+    "date": "Early M31",
+    "era": "The Scouring",
+    "title": "The Great Scouring",
+    "description": "Loyalist forces drive the traitor legions toward the Eye of Terror and divide the Legions into Chapters.",
+    "faction": "Adeptus Astartes",
+    "accent": "gold"
+  },
+  {
+    "id": "war-of-the-beast",
+    "date": "544.M32",
+    "era": "Age of Imperium",
+    "title": "The War of the Beast",
+    "description": "An Ork empire of unprecedented scale threatens Terra and exposes the complacency of the High Lords.",
+    "faction": "Orks",
+    "accent": "blood"
+  },
+  {
+    "id": "age-of-apostasy",
+    "date": "M36",
+    "era": "Age of Imperium",
+    "title": "The Age of Apostasy",
+    "description": "Goge Vandire's Reign of Blood nearly tears the Imperium apart from within.",
+    "faction": "Imperium",
+    "accent": "blood"
+  },
+  {
+    "id": "first-tyrannic-war",
+    "date": "745.M41",
+    "era": "Late M41",
+    "title": "The First Tyrannic War",
+    "description": "Hive Fleet Behemoth strikes Macragge, revealing a devouring extragalactic threat.",
+    "faction": "Tyranids",
+    "accent": "warp"
+  },
+  {
+    "id": "thirteenth-black-crusade",
+    "date": "999.M41",
+    "era": "Time of Ending",
+    "title": "The Thirteenth Black Crusade",
+    "description": "Abaddon launches his greatest offensive and Cadia breaks beneath the assault.",
+    "faction": "Chaos",
+    "accent": "blood"
+  },
+  {
+    "id": "great-rift",
+    "date": "Opening of M42",
+    "era": "Era Indomitus",
+    "title": "The Great Rift Opens",
+    "description": "The Cicatrix Maledictum splits the galaxy and isolates Imperium Nihilus in a long night.",
+    "faction": "Chaos",
+    "accent": "warp"
+  },
+  {
+    "id": "indomitus-crusade",
+    "date": "Early M42",
+    "era": "Era Indomitus",
+    "title": "The Indomitus Crusade",
+    "description": "The returned Roboute Guilliman launches a vast crusade to stabilize a sundered Imperium.",
+    "faction": "Imperium",
+    "accent": "gold"
+  },
+  {
+    "id": "fourth-tyrannic-war",
+    "date": "M42",
+    "era": "Era Indomitus",
+    "title": "The Fourth Tyrannic War",
+    "description": "Hive Fleet Leviathan drives into the Segmentum Pacificus, forcing humanity into another vast war of survival.",
+    "faction": "Tyranids",
+    "accent": "warp"
+  }
+]

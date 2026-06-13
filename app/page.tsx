@@ -1,103 +1,98 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Atom, BookOpen, Crown, GitBranch, Orbit, Sparkles, Swords } from "lucide-react";
+
+import { Hero } from "@/components/home/Hero";
+import { TimelineWidget } from "@/components/home/TimelineWidget";
+import { FactionCard } from "@/components/lore/FactionCard";
+import { MetallicDivider } from "@/components/lore/MetallicDivider";
+import factions from "@/content/factions.json";
+import { getAllArticles } from "@/lib/content";
+
+const archiveDoors = [
+  { title: "Cosmology", description: "The Materium, the Warp, souls, gods, and the forces beneath reality.", href: "/cosmology/materium-immaterium", icon: Orbit },
+  { title: "The Imperium", description: "Ten thousand years of human dominion, decay, faith, and survival.", href: "/imperium/golden-throne", icon: Crown },
+  { title: "Primarchs", description: "The Emperor's lost sons, their Legions, victories, and betrayals.", href: "/primarchs/roboute-guilliman", icon: Swords },
+  { title: "Chaos", description: "The Ruinous Powers and the mortal hosts that answer their call.", href: "/chaos/ruinous-powers", icon: Sparkles },
+  { title: "Xenos", description: "Ancient species, alien empires, and threats that predate human dominion.", href: "/xenos/necrons", icon: Atom },
+  { title: "Learning Roadmap", description: "A guided path through the setting, from first principles to M42.", href: "/learning", icon: BookOpen },
+  { title: "Galactic Timeline", description: "Trace the long chain of disasters that formed the current era.", href: "/timeline", icon: GitBranch },
+];
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const featuredArticles = getAllArticles().filter((article) => article.featured).slice(0, 4);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <Hero />
+
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div className="max-w-3xl">
+          <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-[var(--gold)]">Choose an archive</p>
+          <h2 className="mt-5 font-heading text-3xl leading-tight text-[var(--parchment)] sm:text-5xl">Every war has an origin.</h2>
+          <p className="mt-5 text-base leading-8 text-[var(--muted)]">Follow the setting by idea, institution, demigod, or calamity. Each archive is built to connect the facts into a coherent history.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="mt-12 grid gap-px border border-[var(--metal-border)] bg-[var(--metal-border)] sm:grid-cols-2 lg:grid-cols-3">
+          {archiveDoors.map((door) => {
+            const Icon = door.icon;
+            return (
+              <Link key={door.title} href={door.href} className="group bg-[var(--void)] p-7 transition-colors hover:bg-[var(--gold)]/[0.035]">
+                <Icon className="size-6 text-[var(--gold)]" strokeWidth={1.4} />
+                <h3 className="mt-8 font-heading text-lg text-[var(--parchment)]">{door.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{door.description}</p>
+                <span className="mt-6 flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.16em] text-[var(--gold)] opacity-70 transition-all group-hover:gap-3 group-hover:opacity-100">
+                  Enter archive <ArrowRight className="size-3" />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="border-y border-[var(--metal-border)] bg-black/25 px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-[var(--gold)]">The long war</p>
+              <h2 className="mt-5 font-heading text-3xl text-[var(--parchment)] sm:text-5xl">A galaxy shaped by catastrophe</h2>
+            </div>
+            <Link href="/timeline" className="text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--gold)]">View complete timeline →</Link>
+          </div>
+          <TimelineWidget />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-[var(--gold)]">Featured records</p>
+            <h2 className="mt-5 font-heading text-3xl leading-tight text-[var(--parchment)] sm:text-5xl">Foundational lore</h2>
+            <p className="mt-5 text-base leading-8 text-[var(--muted)]">Begin with the forces and decisions that define every other conflict in the setting.</p>
+          </div>
+          <div className="space-y-1">
+            {featuredArticles.map((article, index) => (
+              <Link key={article.href} href={article.href} className="group grid gap-4 border-b border-[var(--metal-border)] py-5 sm:grid-cols-[50px_1fr_auto] sm:items-center">
+                <span className="font-heading text-xl text-[var(--gold)]/35">{String(index + 1).padStart(2, "0")}</span>
+                <span>
+                  <strong className="block font-heading text-lg font-medium text-[var(--parchment)] group-hover:text-[var(--gold)]">{article.title}</strong>
+                  <span className="mt-1 block text-xs leading-6 text-[var(--muted)]">{article.excerpt}</span>
+                </span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[var(--gold)]">{article.readingTime}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:pb-32">
+        <MetallicDivider className="mb-14" />
+        <div className="max-w-3xl">
+          <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-[var(--gold)]">Powers of the age</p>
+          <h2 className="mt-5 font-heading text-3xl text-[var(--parchment)] sm:text-5xl">Factions without mercy</h2>
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {factions.map((faction) => <FactionCard key={faction.id} faction={faction} />)}
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "imperium",
+    "name": "Imperium of Man",
+    "allegiance": "Imperium",
+    "description": "A million-world empire held together by faith, sacrifice, bureaucracy, and ceaseless war.",
+    "href": "/imperium/golden-throne",
+    "accent": "gold",
+    "sigil": "I"
+  },
+  {
+    "id": "chaos",
+    "name": "Forces of Chaos",
+    "allegiance": "Chaos",
+    "description": "Traitor legions, daemons, and mortal cults serving the predatory powers of the Warp.",
+    "href": "/chaos/ruinous-powers",
+    "accent": "blood",
+    "sigil": "VIII"
+  },
+  {
+    "id": "necrons",
+    "name": "Necrons",
+    "allegiance": "Xenos",
+    "description": "Deathless dynasties awakening from tomb worlds with dominion written into their memory.",
+    "href": "/xenos/necrons",
+    "accent": "warp",
+    "sigil": "N"
+  },
+  {
+    "id": "orks",
+    "name": "Orks",
+    "allegiance": "Xenos",
+    "description": "A belligerent species engineered for war, spreading across the galaxy in endless Waaaghs.",
+    "href": "/timeline#war-of-the-beast",
+    "accent": "blood",
+    "sigil": "O"
+  },
+  {
+    "id": "aeldari",
+    "name": "Aeldari",
+    "allegiance": "Xenos",
+    "description": "The scattered heirs of a fallen empire, walking narrow paths to resist extinction.",
+    "href": "/timeline#fall-of-aeldari",
+    "accent": "warp",
+    "sigil": "A"
+  },
+  {
+    "id": "tyranids",
+    "name": "Tyranids",
+    "allegiance": "Xenos",
+    "description": "Extragalactic hive fleets that consume every living resource in their path.",
+    "href": "/timeline#fourth-tyrannic-war",
+    "accent": "warp",
+    "sigil": "T"
+  }
+]
